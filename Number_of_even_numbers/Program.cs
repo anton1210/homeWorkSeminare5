@@ -2,3 +2,29 @@
 Напишите программу, которая покажет количество чётных чисел в массиве.
 [345, 897, 568, 234] -> 2 */
 
+/* 
+1 - Запрос на размер массива
+2 - Создать массив с указанным размером от пользователя
+3 - Вывести на экарн созданный массив с трехзначными числами
+4 - Пройтись по каждому числу и найти четные числа в массиве
+5 - Вывести на экран сколько четных чисел в массиве
+*/
+
+Console.Write("Введите рамер массива: ");
+int arraySize = Convert.ToInt32(Console.ReadLine());
+
+int[] array = new int[arraySize];
+for (int i = 0; i < array.Length; i++)
+{
+    int newArray = array[i] = new Random().Next(100, 1000);
+    Console.Write($"{newArray} ");
+}
+
+int count = 0;
+
+for (int x = 0; x < array.Length; x++)
+{
+if (array[x] % 2 == 0)
+count++;
+}
+Console.WriteLine($"В заданном массиве, {count} четных");
